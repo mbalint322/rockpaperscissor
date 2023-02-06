@@ -1,37 +1,75 @@
 const Choices = ["rock", "paper", "scissor"];
 
-console.log(PlayRound(getPlayerChoice(), getComputerChoice()));
+game();
+
+function game() {
+    let PlayerWon = 0;
+    let ComputerWon = 0;
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+        let result = PlayRound(getPlayerChoice(), getComputerChoice());
+        if (result == 1) {
+            PlayerWon += 1;
+        }
+        if (result == undefined) {
+            PlayerWon += 1;
+            ComputerWon += 1;
+        }
+        if (result == 0) {
+            ComputerWon += 1;
+        }
+        console.log("player: " + PlayerWon);
+        console.log("computer: " + ComputerWon);
+        console.log(result);
+    }
+    if (PlayerWon > ComputerWon) {
+        alert("You won with a score of " + PlayerWon + "points versus the computer's " + ComputerWon + " points.");
+    }
+    else {
+        alert("The computer won with a score of " + ComputerWon + " points versus your " + PlayerWon + " points.");
+    }
+}
 
 function PlayRound(PlayerChoice, ComputerChoice) {
     console.log(ComputerChoice);
     console.log(PlayerChoice);
     if (PlayerChoice == "rock") {
         if (ComputerChoice == "scissor") {
-            return "You won! Rock beats Scissor";
+            alert("You won! Rock beats Scissor")
+            return 1;
         } 
         if (ComputerChoice == "rock") {
-            return "It's a tie! You both chose Rock";
+            alert("It's a tie! You both chose Rock")
+            return undefined;
         }
-        else return "You lose! Paper beats Rock";
+        else alert("You lose! Paper beats Rock")
+        return 0;
     }
     if (PlayerChoice == "paper") {
         if (ComputerChoice == "rock") {
-            return "You win! Paper beats Rock";
+            alert("You win! Paper beats Rock")
+            return 1;
         } 
         if (ComputerChoice == "paper") {
-            return "It's a tie! You both chose Paper";
+            alert("It's a tie! You both chose Paper")
+            return undefined;
         }
-        else return "You lose! Scissor beats Paper";
+        else alert("You lose! Scissor beats Paper")
+        return 0;
     }
     if (PlayerChoice == "scissor") {
         if (ComputerChoice == "paper") {
-            return "You won! Scissor beats Paper";
+            alert("You won! Scissor beats Paper")
+            return 1;
         } 
         if (ComputerChoice == "scissor") {
-            return "It's a tie! You both chose Scissor";
+            alert("It's a tie! You both chose Scissor")
+            return undefined;
         }
-        else return "You lose! Rock beats Scissor";
+        else alert("You lose! Rock beats Scissor")
+        return 0;
     }
+    else return "Please enter a valid choice.";
 }
 
 function getPlayerChoice() {
