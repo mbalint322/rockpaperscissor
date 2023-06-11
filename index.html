@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <script src="script.js" type="text/javascript" defer></script>
     <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="rock" class="weapon">Rock</button>
-    <button id="paper" class="weapon">Paper</button>
-    <button id="scissor" class="weapon">Scissor</button>
-    <button id="playAgain" hidden="true">Play again</button>
-
-    <div id="messageField">Choose your weapon!</div>
-    <div id="score"></div>
+    <div class="header">
+        <div class="title">ROCK, PAPER, SCISSOR</div>
+        <div>An adventure</div>
+    </div>
+        
+    <div class="combat_screen">
+        <div id="health_bar">
+            <div class="player_health">
+                <div id="boy">The Boy</div> 
+                <img src="./pixelart/heart.jpeg">
+                <img src="./pixelart/heart.jpeg">
+                <img src="./pixelart/heart.jpeg">
+                <img src="./pixelart/heart.jpeg">
+                <img src="./pixelart/heart.jpeg">
+            </div>
+            <div class="monster_health">
+                <img src="./pixelart/monster.jpeg">
+                <img src="./pixelart/monster.jpeg">
+                <img src="./pixelart/monster.jpeg">
+                <img src="./pixelart/monster.jpeg">
+                <img src="./pixelart/monster.jpeg">
+                <div>Monsters</div>
+            </div>
+        </div>
+        <div class="character_container" id="cc">
+            <img src="./pixelart/logo_magic.jpeg" class="character">
+            <img src="./pixelart/unknown.jpeg" class="character">
+        </div>
+    </div>   
+    <div class="main_body">
+        <div id="messageField" class="text_field">Choose your weapon!</div>
+        <div id="score" class="text_field"></div>
+        <div class="body">
+        <button id="rock" class="weapon" hidden="true"><img src="./pixelart/rock_magic.jpeg"></button>
+        <button id="paper" class="weapon" hidden="true"><img src="./pixelart/paper_magic.jpeg"></button>
+        <button id="scissor" class="weapon" hidden="true"><img src="./pixelart/scissor_magic.jpeg"></button>
+        <button id="gameButton"></button>
+        </div>
+    </div>
 </body>
 </html>
