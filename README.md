@@ -36,10 +36,12 @@ Still have to figure out a way to make this work.
 - Random monsters now appear according to their types.
 
 STILL TO DO: 
-- Hover and on click effects
+- Hover and on click effects - DONE
 - Story and animation for the text to appear
 - Message to appear above weapon icons and not below - DONE
-- Apply character style to appended monsters
+- Apply character style to appended monsters - DONE
 - Winner sequence - Player gets their reward for killing 5 monsters
 - Text for monsters appearing and change of messages according to new design
 - Character image to change depending on what weapon you chose - create more pixel art? Not sure if AI can create consistent character
+- More background styling to the website, make the character container cooler
+- Don't forget to synchronize the font type for all text

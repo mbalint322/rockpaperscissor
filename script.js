@@ -1,4 +1,5 @@
 const Choices = ["rock", "paper", "scissor"]; // Array containing possible choices
+const weapons = Array.from(document.querySelectorAll('.weapon')); //Array of the weapon buttons
 
 //Have to declare the monster images to preload them, otherwise they wouldn't appear when appending
 const scissorMonster0 = document.createElement("img");
@@ -15,6 +16,8 @@ const scissorMonster0 = document.createElement("img");
 
     const scissorMonsters = [scissorMonster0, scissorMonster1, scissorMonster2, scissorMonster3];
 
+    scissorMonsters.forEach(element => element.classList.add('character')); //Adds the original css style to appended images
+
 const rockMonster0 = document.createElement("img");
     rockMonster0.src = "./pixelart/rock_monsters/rockmonster0.jpeg";
 
@@ -28,6 +31,8 @@ const rockMonster0 = document.createElement("img");
     rockMonster3.src = "./pixelart/rock_monsters/rockmonster3.jpeg";
 
     const rockMonsters = [rockMonster0, rockMonster1, rockMonster2, rockMonster3];
+
+    rockMonsters.forEach(element => element.classList.add('character')); //Adds the original css style to appended images
 
 const paperMonster0 = document.createElement("img");
     paperMonster0.src = "./pixelart/paper_monsters/papermonster0.jpeg";
@@ -43,12 +48,14 @@ const paperMonster0 = document.createElement("img");
 
     const paperMonsters = [paperMonster0, paperMonster1, paperMonster2, paperMonster3];
 
+    paperMonsters.forEach(element => element.classList.add('character')); //Adds the original css style to appended images
+
 const messageField = document.querySelector('#messageField');
 
 let playerScore = 0;
 let computerScore = 0;
 
-const weapons = Array.from(document.querySelectorAll('.weapon'));
+
 const gameButton = document.querySelector('#gameButton');
 gameButton.textContent = "Start New Game";
 gameButton.addEventListener ('click', () => {

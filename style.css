@@ -32,7 +32,7 @@ img {
     border-radius: 10px;
     border-width: 5px;
     border-color: #001f03;
-    flex-shrink: 3;
+    flex-shrink: 1;
     height: 135px;
     width: 135px;
     padding: 0px;
@@ -89,14 +89,58 @@ body {
     display: flex;
     align-items: center;
     justify-content: start;
+    font-weight: bold;
 }
 
 .monster_health{
     display: flex;
     align-items: center;
     justify-content: end;
+    font-weight: bold;
 }
 
 #boy {
     min-width: 66px;
+    flex-shrink:0;
+}
+
+.weapon:hover {
+    box-shadow: 0 0 1rem #1ca4ff;
+    transition-duration: 0.2s;
+    transform: scale(1.05);
+}
+
+.weapon:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 1rem #1ca4ff;
+}
+
+#rock {
+    background-image: url("./pixelart/rock_magic.jpeg");
+    background-size: contain;
+}
+
+#rock:hover {
+    background-image: url("./pixelart/rock_magic_hover.jpeg");
+    background-size: contain;
+}
+
+#paper {
+    background-image: url("./pixelart/paper_magic.jpeg");
+    background-size: contain;
+}
+
+#paper:hover {
+    background-image: url("./pixelart/paper_magic_hover.jpeg");
+    background-size: contain;
+}
+
+#scissor {
+    background-image: url("./pixelart/scissor_magic.jpeg");
+    background-size: contain;
+}
+
+#scissor:hover {
+    background-image: url("./pixelart/scissor_magic_hover.jpeg");
+    background-size: contain;
 }
